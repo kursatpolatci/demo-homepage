@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import aboutImg from '../assets/image/rafiki.png'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const About = () => {
+    useEffect(() => {
+        Aos.init({duration: 2000});
+    }, [])
   return (
-    <div>
+    <div data-aos="fade-up">
       {/* About text */}
       <div className=' px-4 lg:px-14 max-w-screen-2xl mx-auto my-8' id='about'>
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12">

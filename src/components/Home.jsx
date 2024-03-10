@@ -1,6 +1,7 @@
 import React from 'react'
 import { Carousel } from 'flowbite-react'
 import banner1 from '../assets/image/halat-logo.png'
+
 const Home = () => {
   return (
     <div className='bg-neutralSilver w-full' id='home'>

@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Blog = () => {
     const blogs = [
@@ -6,8 +8,12 @@ const Blog = () => {
         {id: 2, title: "Creating StreamLined Safeguarding Processes with OneRen", image:'/src/assets/image/haber2.jpg'},
         {id: 3, title: "Creating StreamLined Safeguarding Processes with OneRen", image:'/src/assets/image/haber3.jpg'},
     ]
+
+    useEffect(() => {
+        Aos.init({duration: 2000});
+    }, [])
   return (
-    <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12' id='faq'>
+    <div data-aos="fade-up" className='px-4 lg:px-14 max-w-screen-2xl mx-auto my-12' id='faq'>
             <div className='text-center md:w-1/2 mx-auto'>
                 <h2 className='text-4xl text-neutralDGrey font-semibold mb-4'>Caring is the new Marketing</h2>
                 <p className='text-sm text-neutralGrey mb-8 md:w-3/4 mx-auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, nesciunt enim! Sed, libero. Deleniti, ab excepturi ad officiis accusamus voluptatibus consectetur? Temporibus magni quidem aliquam!</p>

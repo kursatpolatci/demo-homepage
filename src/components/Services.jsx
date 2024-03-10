@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Services = () => {
     const services = [
@@ -7,8 +9,11 @@ const Services = () => {
         {id: 3, title: "Clubs and Groups", description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum beatae fuga veritatis aspernatur quos!", image:"/src/assets/image/services_card3.png"},
 
     ]
+    useEffect(() => {
+      Aos.init({duration: 2000});
+  }, [])
   return (
-    <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id='service'>
+    <div  data-aos="fade-up" className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id='service'>
       <div className='text-center my-8'>
         <h2 className='text-4xl text-neutralDGrey font-semibold mb-2'>Our Clients</h2>
         <p className='text-neutralGrey '>We have been working with some Fortune 500+ clients</p>
